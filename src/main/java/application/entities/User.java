@@ -1,4 +1,4 @@
-package entities;
+package application.entities;
 
 import java.io.Serializable;
 
@@ -23,9 +23,8 @@ public class User implements Serializable {
     String phone;
     String password;
 
-    public User() {
 
-    }
+    
 
     public User(Long id, String nome, String email, String phone, String password){
         super();
