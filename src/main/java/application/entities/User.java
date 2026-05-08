@@ -23,7 +23,7 @@ public class User implements Serializable {
     @Id
     @GeneratedValue (strategy = GenerationType.IDENTITY)
     Long id;
-    String nome;
+    String name;
     String email;
     String phone;
     String password;
@@ -39,10 +39,10 @@ public class User implements Serializable {
     public User(){
     }
 
-    public User(Long id, String nome, String email, String phone, String password){
+    public User(Long id, String name, String email, String phone, String password){
         super();
         this.id = id;
-        this.nome = nome;
+        this.name = name;
         this.email = email;
         this.phone = phone;
         this.password = password;
@@ -55,12 +55,12 @@ public class User implements Serializable {
         this.id = id;
     } 
 
-    public String getNome() {
-        return nome;
+    public String getname() {
+        return name;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
+    public void setname(String name) {
+        this.name = name;
     }
 
     public String getEmail() {
@@ -92,7 +92,7 @@ public class User implements Serializable {
         final int prime = 31;
         int result = 1;
         result = prime * result + ((id == null) ? 0 : id.hashCode());
-        result = prime * result + ((nome == null) ? 0 : nome.hashCode());
+        result = prime * result + ((name == null) ? 0 : name.hashCode());
         result = prime * result + ((email == null) ? 0 : email.hashCode());
         result = prime * result + ((phone == null) ? 0 : phone.hashCode());
         result = prime * result + ((password == null) ? 0 : password.hashCode());
@@ -113,10 +113,10 @@ public class User implements Serializable {
                 return false;
         } else if (!id.equals(other.id))
             return false;
-        if (nome == null) {
-            if (other.nome != null)
+        if (name == null) {
+            if (other.name != null)
                 return false;
-        } else if (!nome.equals(other.nome))
+        } else if (!name.equals(other.name))
             return false;
         if (email == null) {
             if (other.email != null)
